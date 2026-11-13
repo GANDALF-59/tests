@@ -8,6 +8,9 @@ describe('password utilities', () => {
   const password2 = 'Password456';
 
   it('Generación de hashes', async () => {
+    expect(password1).not.toBe("");
+    expect(password2).not.toBe("");
+    
     const hash1 = await hashPassword(password1);
     const hash2 = await hashPassword(password2);
 
